@@ -63,6 +63,7 @@ namespace DevIO.App.Controllers
             if (id != fornecedorViewModel.Id) return NotFound();
             if (!ModelState.IsValid) return View(fornecedorViewModel);
             var fornecedor = _mapper.Map<Fornecedor>(fornecedorViewModel);
+            await _fornecedorRepository.Atualizar(fornecedor);
             return RedirectToAction(nameof(Index));
         }
 
