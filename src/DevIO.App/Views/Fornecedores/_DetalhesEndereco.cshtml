@@ -18,18 +18,16 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>@Html.DisplayFor(model => model.Endereco.Logradouro)</td>
-                    <td>@Html.DisplayFor(model => model.Endereco.Numero)</td>
-                    <td>@Html.DisplayFor(model => model.Endereco.Complemento)</td>
-                    <td>@Html.DisplayFor(model => model.Endereco.Bairro)</td>
-                    <td>@Html.DisplayFor(model => model.Endereco.Cep)</td>
-                    <td>@Html.DisplayFor(model => model.Endereco.Cidade)</td>
-                    <td>@Html.DisplayFor(model => model.Endereco.Estado)</td>
-                    <td><a class="btn btn-info"><span title="Editar" class="fa fa-pencil-alt"></span></a></td>
-                </tr>
-            </tbody>
+            <tr>
+                <td>@Html.DisplayFor(model => model.Endereco.Logradouro)</td>
+                <td>@Html.DisplayFor(model => model.Endereco.Numero)</td>
+                <td>@Html.DisplayFor(model => model.Endereco.Complemento)</td>
+                <td>@Html.DisplayFor(model => model.Endereco.Bairro)</td>
+                <td>@Html.DisplayFor(model => model.Endereco.Cep)</td>
+                <td>@Html.DisplayFor(model => model.Endereco.Cidade)</td>
+                <td>@Html.DisplayFor(model => model.Endereco.Estado)</td>
+                <td><a asp-action="AtualizarEndereco" asp-route-id="@Model.Id" class="btn btn-info" data-modal=""><span title="Editar" class="fa fa-pencil-alt"></span></a></td>
+            </tr>
         </table>
     }
 </div>
